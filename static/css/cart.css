@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url('cart.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+
+table{
+    margin: 50px auto 50px 350px;
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 40%;
+    background-color: #D7A86E;
+}
+
+th{
+    border: 1px solid;
+    text-align: center;
+    padding: 20px;
+    background-color: #A64B2A;
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+}
+
+td{
+    border: 1px solid;
+    text-align: center;
+    padding: 20px;
+    font-size: 17px;
+    font-family: "Comic Sans MS";
+}
+
+.anchor{
+    font-size: 20px;
+    color: #D8D8D8;
+}

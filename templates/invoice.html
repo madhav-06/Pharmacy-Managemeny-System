@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/invoice.css') }}">
+</head>
+<body>
+    <div class="header">
+        <center><h2>Bill Number: {{invoice_details[0]['bill_no']}}</h2></center>
+        <center><h3>Date: {{invoice_details[0]['bill_date']}}</h3></center>
+    </div>
+    <br><br>
+    <div>
+        <table>
+            <tr>
+                <th>PID</th>
+                <th>TABLET NAME</th>
+                <th>PRICE</th>
+                <th>QUANTITY</th>
+                <th>COST</th>
+            </tr>
+            {%for i in invoice_details%}
+            <tr>
+                <td>{{i['pid']}}</td>
+                <td>{{i['t_name']}}</td>
+                <td>{{i['price']}}</td>
+                <td>{{i['quantity']}}</td>
+                <td>{{i['cost']}}</td>
+            </tr>
+            {%endfor%}
+            <tr>
+                <td colspan="4">Total Cost</td>
+                <td>{{total}}</td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div>
+        <a href="{{ url_for('mainpage') }}">Go back to mainpage</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/cart.css') }}">
+</head>
+<body>
+    <div>
+        <table style="margin-left: 20px;">
+            <tr>
+                <th>TABLET NAME</th>
+                <th>QUANTITY</tr>
+            </tr>
+            {%for tablet in details%}
+            <tr>
+                <td>{{tablet['t_name']}}</td>
+                <td>{{tablet['quantity']}}</td>  
+            {%endfor%}
+            </tr>
+            </table>
+    </div>
+    <br><br>
+    <div>
+        <a href="{{ url_for('mainpage') }}" class="anchor">Go back to mainpage</a>
+    </div>
+    <br>
+    <div>
+        <a href="{{ url_for('invoice') }}" class="anchor">Generate Bill</a>
+    </div>
+</body>
+</html>

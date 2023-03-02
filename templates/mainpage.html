@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="{{ url_for('static',filename='css/mainpage_css.css') }}">
+    </head>
+    <body>
+        <br><br>
+        <center><h1>Simple Meds <span style="justify-content: center;"><img class="image" src="static/css/plus1.png" style="background-size: contain;"> </span></h1></center>
+        <center><h2>{{ msg }}</h2></center>
+        <br>
+        <div class="cart">
+            <a href="{{ url_for('cart') }}"><strong>VIEW CART</strong></a>
+        </div>
+        <div class="form">
+            <form action="/mainpage" method="POST">
+                <label class="label">Enter the tablet name: </label>
+                <input type="text" name="name" placeholder="Enter the tablet name" size="25" class="text">
+                <br><br>
+                <center><input type="submit" class="submit"></center>
+            </form>
+        </div>
+        <br><br>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/tablet.css') }}">
+</head>
+<body>
+    <div>
+        <center><h2>TABLET DETAILS</h2></center>
+        {% block content %}
+        <table>
+            <tr>
+                <th>PID</th>
+                <td>{{ tdetails['pid'] }}</td>
+            </tr>
+            <tr>
+                <th>TABLET NAME</th>
+                <td>{{ tdetails['t_name'] }}</td>
+            </tr>
+            <tr>
+                <th>PRICE</th>
+                <td>{{ tdetails['price'] }}</td>
+            </tr>
+            <tr>
+                <th>MANUFACTURE DATE</th>
+                <td>{{ tdetails['mfd_date'] }}</td>
+            </tr>
+            <tr>
+                <th>EXPIRY DATE</th>
+                <td>{{ tdetails['exp_date'] }}</td>
+            </tr>
+            <tr>
+                <th>QUANTITY</th>
+                <td>{{ tdetails['quantity'] }}</td>
+            </tr>
+        </table>
+        {% endblock %}
+    </div>
+    <br>
+    <div class="form">
+        <form action="/tablet_details" method="POST">
+            <label class="label"><strong>Enter the tablet name: </strong></label>
+            <input type="text" name="name">
+            <br><br><br>
+            <label class="label"><strong>Enter the number of sheets: </strong></label>
+            <input type="text" name="quantity">
+            <input type="submit" value="ADD TO CART">
+        </form>
+    </div>
+    <div>
+        <a href="{{ url_for('mainpage') }}">Go back to mainpage</a>
+    </div>
+</body>
+</html>

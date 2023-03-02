@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Main Page</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    </head>
+    <body>
+        <h1><center>Welcome to our Pharmacy Management System</center></h1>
+   
+
+        <div class="container">
+            <div class="form">
+                <form action="{{ url_for('login') }}" method="POST">
+                    <h2>ADMIN LOGIN</h2>
+                    <h2>{{ msg }}</h2>
+                    <input type="text" name="email" placeholder="Email id">
+                    <input type="password" name="password" placeholder="Password">
+                    <!-- <button type="button"><a href="{{ url_for('login') }}">LOG IN</a></button>  -->
+                    <input type="submit" class="submit">
+                    <!-- <p class="para">Not having account ?</p>
+                    <button type="button"><a href="{{ url_for('signup') }}">SIGNUP</a></button>   -->
+                </form>
+                <p class="para">Not having account ?</p>
+                <button type="button"><a href="{{ url_for('signup') }}">SIGNUP</a></button>  
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static',filename='images/pharmacy.jpg') }}" alt="Pharmacy Image">
+            </div>
+            <!-- <button type="button"><a href="{{ url_for('signup') }}">SIGNUP</a></button>
+            <button type="button"><a href="{{ url_for('login') }}">LOGIN</a></button>   -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1{
+
+    color: #0014FF;
+    font-family: "Franklin Gothic Medium";
+    font-size: 66px;
+    margin: 40px auto 40px 380px;
+    text-shadow: 10px 0px 10px #00FFF6;
+}
+.image{
+    padding-top: 10px;
+    height: 60px;
+    width: 60px;
+}
+h2{
+    color: #00005C;
+    font-family: "Franklin Gothic Medium";
+    font-size: 30px;
+    margin: 60px auto 0px 400px;
+    text-shadow: 10px 0px 10px #7978FF;
+}
+
+body{
+    background-color: #A5F1E9;
+    background-image: url('mainpage4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+
+.cart{
+    text-align: right;
+    margin: 0px 100px 100px auto;
+}
+
+.cart a{
+    color: #CF0A0A;
+    text-decoration: none;
+    font-size: 22px;
+    border-bottom: 2px solid red;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    margin: 100px auto auto 400px;
+}
+
+.submit{
+    background-color: black;
+    padding: 5px 12px;
+    color: white;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.label{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.text{
+    line-height: 10px;
+}
